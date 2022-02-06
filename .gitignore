@@ -1,0 +1,10 @@
+publish.sh
+session.vim
+Session.vim
+serve/resources/*
+serve/blog/*.html
+serve/*.html
+src/to_serve/blog/*.html
+src/to_serve/*.html
+src/blog-dev/*.html
+src/blog/*.html

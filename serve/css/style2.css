@@ -1,0 +1,218 @@
+:root {
+    --white: #EEEEE0;
+    --reds:  #D28575;
+    --red:   #DF9988;
+    --redh:  #F69A9A;
+    --blues: #7A7388;
+    --blue:  #88889D;
+    --blueh: #AAAACC;
+    --bgs:   #111111;
+    --bg:    #1A1A2A;
+}
+
+html{
+    padding-bottom: 400px;
+}
+
+body {
+    max-width: 1100px;
+    margin: 0 auto 0 auto;
+    /* text-align: center; */
+    background: var(--bg);
+}
+
+form {
+    height: 100%;
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    overflow: auto;
+    /* padding: 0in 0.1in 0.1in 0.1in; */
+    padding: 0.02in 0in 0.02in 0in;
+    margin: 0;
+}
+
+.article {
+    /* flex: 1; */
+    color: var(--white);
+    background-color: var(--bgs);
+    margin: 0 0 0.15in 0;
+    padding 0;
+    /* height: 100; */
+}
+
+.article img {
+    /* padding: 0 0.2in 0in 0.2in; */
+    display: block;
+    margin: 0.2in auto 0.2in auto;
+    width: 90%;
+    /* width: 85%; */
+    /* text-align: center; */
+}
+
+#medimg {
+    display: block;
+    margin: 0.2in auto 0.2in auto;
+    width: 50%;
+}
+
+.article p {
+    margin: 0 0;
+    padding: 0.1in 7.5% 0in 7.5%;
+    text-indent: 1em;
+    color: var(--white);
+    font-size: 1.5em;
+    text-align: left;
+}
+
+.article ul {
+    margin: 0 0;
+    padding: 0 7.5% 0in 15%;
+    text-indent: 1em;
+    color: var(--white);
+    font-size: 1.3em;
+    text-align: left;
+}
+
+.imglinks {
+    display: flex;
+    margin: 0 0.5in;
+    padding: 0 0.3in 0 0.3in;
+    list-style-type: none;
+    flex-wrap: wrap;
+    overflow: auto;
+}
+.imglinks a {
+    font-weight: 400;
+    flex: 1;
+    padding: 0 0;
+    padding: 0 0.15in;
+    float: center;
+    color: var(--blueh)
+}
+.imglinks img {
+    width: 1in;
+}
+
+.article li {
+    padding: 0.02in 0;
+    text-indent: 0;
+}
+
+.article h1 {
+    padding: 0.3in 0 0 0;
+    margin: 0;
+    text-align: center;
+    font-size: 3em;
+    color: var(--red);
+}
+
+.article h2 {
+    text-align: center;
+    font-size: 2.3em;
+    color: var(--red);
+    margin: 10px 0 30px 0;
+}
+
+.article h3 {
+    text-align: center;
+    font-size: 2.1em;
+    color: var(--red);
+    margin: 0 0 10px 0;
+}
+
+.article h4 {
+    text-align: left;
+    font-size: 1.7em;
+    color: var(--reds);
+    margin: 10px 0 0 0;
+    padding: 0.1in 10% 0in 8%;
+}
+
+.button {
+    font-size: 1.3em;
+    font-weight: bold;
+    min-width: 1.0in;
+    padding: 0.1in;
+    color: white;
+    flex: 1;
+    background-color: var(--blue);
+    text-decoration: none;
+}
+.button:hover {
+    background-color: var(--blueh);
+    color: white;
+}
+#b2 {
+    background-color: var(--blues);
+}
+#b2:hover {
+    background-color: var(--blueh);
+}
+#active {
+    background-color: var(--red) !important;
+}
+#active:hover {
+    background-color: var(--redh) ;
+}
+
+.links {
+    padding: 0.1in 0.3in 0.2in 0.3in;
+    margin: 0 0.5in;
+}
+
+.tags {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    color: var(--blues)
+}
+.tags a {
+    padding: 0 5px;
+}
+
+a {
+    color: var(--blue);
+    text-decoration: none;
+}
+a:hover {
+    color: var(--blueh);
+    text-decoration: none;
+}
+.links a {
+    font-size: 1.2em;
+    font-weight: 400;
+    padding: 0 0.15in;
+    float: center;
+}
+
+.tooltip {
+    color: var(--red);
+    font-weight: bold;
+    position: relative;
+    margin: 0in 0.0in 0.7in 0.0in;
+    text-align: center;
+}
+
+.tooltip .tooltiptext {
+    font-weight: normal;
+    width: 130px;
+    background-color: #050505;
+    color: var(--white);
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 50%;
+    margin-left: -65px;
+}
+
+.date {
+    padding: 20px 15px 0 0;
+    margin: 0;
+    color: var(--blues);
+    text-align: right;
+}
