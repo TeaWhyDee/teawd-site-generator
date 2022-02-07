@@ -1,0 +1,50 @@
+form {
+    height: 100%;
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    overflow: auto;
+    padding: 0.02in 0in 0in 0in;
+    margin: 0;
+}
+
+.button {
+    text-overflow: ellipsis;
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: bold;
+    padding: 0.1in 0.2in;
+    color: white;
+    flex: 1;
+    background-color: var(--blue);
+    text-decoration: none;
+}
+.button:hover {
+    background-color: var(--blueh);
+    color: white;
+}
+#b2 {
+    background-color: var(--blues);
+}
+#empty {
+    flex: 10;
+    background-color: var(--blued);
+}
+/* #empty:hover { */
+/*     background-color: var(--bg); */
+/* } */
+#b2:hover {
+    background-color: var(--blueh);
+}
+#active {
+    background-color: var(--red);
+}
+#active:hover {
+    background-color: var(--redh);
+}
+
+@media (max-width: 420px) {
+    #empty {
+        display: none;
+    }
+}
