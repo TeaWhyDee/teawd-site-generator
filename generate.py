@@ -133,17 +133,21 @@ for root, dirs, files in os.walk(to_serve):
         headers = str(open(path + "templates/header_template.html", "r").read()).split("\n")
         # Determine which section of website we are in
         # by checking filename and folder structure for matches
-        for file in range(len(headers)-1):
-            header = headers[file]
+        for i in range(len(headers)-1):
+            header = headers[i]
             m = re.match(r'.*> *(\w+)', header)
             if (m != None):
+                if (headers[i].find("blog") != -1 and 
+                        rel_dir.find("blog") != -1):
+                    headers[i] = headers[i].replace("> blog <", "> blog#" 
+                            + file.replace(".html", "") + " <")
                 if (rel_file.find(m.group(1)) != -1):
-                    headers[file] = headers[file].replace("> ", " id=\"active\"> ")
-                elif (file % 2 == 0):
-                    headers[file] = headers[file].replace("> ", " id=\"b2\"> ") 
+                    headers[i] = headers[i].replace("> ", " id=\"active\"> ")
+                elif (i % 2 == 0):
+                    headers[i] = headers[i].replace("> ", " id=\"b2\"> ") 
 
         content = f_in.read()
-        title = "<title>teawhydee | " + os.path.splitext(os.path.basename(f_in.name))[0] + "</title>"
+        title = "<title>teawd's " + os.path.splitext(os.path.basename(f_in.name))[0] + "</title>"
         text = template_content.replace("<!-- CONTENT -->", content)
         text = text.replace("<!-- TITLE -->", title)
         text = text.replace("<!-- HEADER -->", '\n'.join(headers))
