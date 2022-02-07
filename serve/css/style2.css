@@ -3,6 +3,7 @@
     --reds:  #D28575;
     --red:   #DF9988;
     --redh:  #F69A9A;
+    --blued: #5A5368;
     --blues: #7A7388;
     --blue:  #88889D;
     --blueh: #AAAACC;
@@ -11,7 +12,7 @@
 }
 
 html{
-    padding-bottom: 400px;
+    padding-bottom: 0px;
 }
 
 body {
@@ -19,17 +20,6 @@ body {
     margin: 0 auto 0 auto;
     /* text-align: center; */
     background: var(--bg);
-}
-
-form {
-    height: 100%;
-    display: flex;
-    flex-flow: row;
-    flex-wrap: wrap;
-    overflow: auto;
-    /* padding: 0in 0.1in 0.1in 0.1in; */
-    padding: 0.02in 0in 0.02in 0in;
-    margin: 0;
 }
 
 .article {
@@ -127,33 +117,6 @@ form {
     color: var(--reds);
     margin: 10px 0 0 0;
     padding: 0.1in 10% 0in 8%;
-}
-
-.button {
-    font-size: 1.3em;
-    font-weight: bold;
-    min-width: 1.0in;
-    padding: 0.1in;
-    color: white;
-    flex: 1;
-    background-color: var(--blue);
-    text-decoration: none;
-}
-.button:hover {
-    background-color: var(--blueh);
-    color: white;
-}
-#b2 {
-    background-color: var(--blues);
-}
-#b2:hover {
-    background-color: var(--blueh);
-}
-#active {
-    background-color: var(--red) !important;
-}
-#active:hover {
-    background-color: var(--redh) ;
 }
 
 .links {
