@@ -23,12 +23,10 @@ body {
 }
 
 .article {
-    /* flex: 1; */
     color: var(--white);
     background-color: var(--bgs);
     margin: 0 0 0.15in 0;
-    padding 0;
-    /* height: 100; */
+    padding: 0.15in 0 0.15in 0;
 }
 
 .article img {
@@ -120,8 +118,8 @@ body {
 }
 
 .links {
-    padding: 0.1in 0.3in 0.2in 0.3in;
-    margin: 0 0.5in;
+    padding: 0.1in 0.3in 0.0in 0.3in;
+    margin: 0 0in;
 }
 
 .tags {
@@ -174,7 +172,7 @@ a:hover {
 }
 
 .date {
-    padding: 20px 15px 0 0;
+    padding: 0 15px 10px 0;
     margin: 0;
     color: var(--blues);
     text-align: right;

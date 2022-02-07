@@ -18,7 +18,7 @@ browser-sync start --server --files . &
 set -o errexit
 set -o nounset
 
-browser="brave"      # Default browser name. (Technically "X11 Class")
+browser="firefox"      # Default browser name. (Technically "X11 Class")
 keystroke="CTRL+F5"    # The key that tells the browser to reload.
 wd=$(pwd)
 
