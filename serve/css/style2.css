@@ -9,6 +9,8 @@
     --blueh: #AAAACC;
     --bgs:   #111111;
     --bg:    #1A1A2A;
+
+    --orange:   #FEAA22;
 }
 
 html{
@@ -51,7 +53,7 @@ body {
     padding: 0.1in 7.5% 0in 7.5%;
     text-indent: 1em;
     color: var(--white);
-    font-size: 1.5em;
+    font-size: 1.2em;
     text-align: left;
 }
 
@@ -119,6 +121,14 @@ body {
     padding: 0.1in 10% 0in 8%;
 }
 
+.article h5 {
+    text-align: left;
+    font-size: 1.5em;
+    color: var(--blueh);
+    margin: 10px 0 0 0;
+    padding: 0.1in 10% 0in 8%;
+}
+
 .links {
     padding: 0.1in 0.3in 0.2in 0.3in;
     margin: 0 0.5in;
@@ -178,4 +188,22 @@ a:hover {
     margin: 0;
     color: var(--blues);
     text-align: right;
+}
+
+code {
+    padding: 10px;
+    margin: 5px;
+    display: block;
+    font-family: monospace;
+    color: var(--blues);
+    background: var(--bg);
+    text-indent: 0;
+}
+
+em {
+    font-weight: bold;
+}
+
+em.orange {
+    color: var(--orange);
 }
