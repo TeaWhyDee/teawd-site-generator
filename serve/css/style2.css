@@ -53,7 +53,7 @@ body {
     padding: 0.1in 7.5% 0in 7.5%;
     text-indent: 1em;
     color: var(--white);
-    font-size: 1.2em;
+    font-size: 1.3em;
     text-align: left;
 }
 
@@ -62,7 +62,7 @@ body {
     padding: 0 7.5% 0in 15%;
     text-indent: 1em;
     color: var(--white);
-    font-size: 1.3em;
+    font-size: 1.2em;
     text-align: left;
 }
 
@@ -130,7 +130,7 @@ body {
 }
 
 .links {
-    padding: 0.1in 0.3in 0.2in 0.3in;
+    padding: 0.2in 0.3in 0.2in 0.3in;
     margin: 0 0.5in;
 }
 
