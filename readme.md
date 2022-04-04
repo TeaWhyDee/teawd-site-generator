@@ -1,5 +1,5 @@
 Please refer to
-https://teawide.xyz/blog.html#updating-the-website
+https://teawide.xyz/blog/post/updating_the_website
 for info.
 
 I will provide more information in the future.

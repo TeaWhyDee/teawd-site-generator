@@ -10,10 +10,19 @@ is_debug = False
 root = "./"
 path = root + "src/"
 to_serve = path + "to_serve/"
+posts = to_serve + "blog/post/"
 serve = root + "serve/"
+blog_rolling = to_serve + "blog/all.html"
+blog_index = to_serve + "blog.html"
 f_temp = open(path + "templates/template.html", "r")
 template_content = f_temp.read()
+f_temp = open(path + "templates/blog_index.html", "r")
+blog_index_template = f_temp.read()
 comment_pattern = r'<!--.*-->'
+
+def html_title(title):
+    title = title.replace(" ", "_").replace(":", "").lower() + ".html"
+    return title
 
 #                                                  BLOG
 # Go through draft files and publish/update if ready
@@ -56,7 +65,7 @@ for file in sorted_posts:
     sorted_posts_dict[str(file)] = {}
 
 # Store all tags in "tags" variable.
-# Create a dictionary with "post: <tags>" entries.
+# Create a dictionary with each post.
 tags = { "art", "personal" }
 for file in Path(path + "blog").iterdir():
     thistags=set()
@@ -106,18 +115,42 @@ for tag in tags:
     f_tag_out.close()
 
 
-# Put all blogposts in blog.html
-f_blog_out = open(to_serve + "blog.html", "w")
+# Put all blogposts in rolling blog page.
+f_blog_out = open(blog_rolling, "w")
 content_blog = ""
-for file in sorted_posts:
+for file in sorted_posts_dict:
+    f_out = open(posts + html_title(sorted_posts_dict[file]["title"]), "w")
     f_in = open(str(file), "r")
-    content_blog += "<div class=\"article\">\n" + f_in.read() + "\n</div>\n"
-    # content_blog = re.sub(comment_pattern, '', content_blog)
+    text = f_in.read()
+    content_blog += "<div class=\"article\">\n" + text + "\n</div>\n"
+    f_out.write("<div class=\"article\">\n" + text + "</div>")
     f_in.close()
 f_blog_out.write(content_blog)
 f_blog_out.close()
 
 
+# Put all blogposts in index blog page.
+f_blog_out = open(blog_index, "w")
+content_blog = blog_index_template
+tags_html = ""
+for tag in tags:
+    tags_html += "<a href=\"/blog/" + tag + ".html\">#" + tag + " </a>"
+content_blog = content_blog.replace("<!-- TAGS -->", tags_html)
+posts_html = ""
+for key in sorted_posts_dict:
+    title = html_title(sorted_posts_dict[key]["title"])
+    posts_html += sorted_posts_dict[key]["date"] + " - "
+    posts_html += "<em><a href=\"/blog/post/" + title +\
+            "\"> " + sorted_posts_dict[key]["title"] + "</a></em> | "
+    for tag in sorted_posts_dict[key]["tags"]:
+        posts_html += "<a href=\"/blog/" + tag + ".html\"> #" + tag + "</a>"
+    posts_html += "<br>"
+content_blog = content_blog.replace("<!-- POSTS -->", posts_html)
+f_blog_out.write(content_blog)
+f_blog_out.close()
+
+
+sections = { "home", "blog", "misc" }
 # For each file in directory to_serve, 
 # add a heading etc.
 for root, dirs, files in os.walk(to_serve):
@@ -130,6 +163,12 @@ for root, dirs, files in os.walk(to_serve):
         f_out = open(serve + rel_file, "w")
         f_in = open(to_serve + rel_file, "r")
 
+        section = "misc"
+        for i in sections:
+            if rel_file.find(i) != -1:
+                section = i
+                break
+
         headers = str(open(path + "templates/header_template.html", "r").read()).split("\n")
         # Determine which section of website we are in
         # by checking filename and folder structure for matches
@@ -138,16 +177,18 @@ for root, dirs, files in os.walk(to_serve):
             m = re.match(r'.*> *(\w+)', header)
             if (m != None):
                 if (headers[i].find("blog") != -1 and 
-                        rel_dir.find("blog") != -1):
+                        rel_dir == "blog" != -1):
                     headers[i] = headers[i].replace("> blog <", "> blog#" 
                             + file.replace(".html", "") + " <")
+                # Cosmetic. <ake odd buttons a little different shade.
                 if (rel_file.find(m.group(1)) != -1):
                     headers[i] = headers[i].replace("> ", " id=\"active\"> ")
                 elif (i % 2 == 0):
                     headers[i] = headers[i].replace("> ", " id=\"b2\"> ") 
 
         content = f_in.read()
-        title = "<title>teawd's " + os.path.splitext(os.path.basename(f_in.name))[0] + "</title>"
+        # title = "<title>teawd's " + os.path.splitext(os.path.basename(f_in.name))[0] + "</title>"
+        title = "<title>teawd's " + section + "</title>"
         text = template_content.replace("<!-- CONTENT -->", content)
         text = text.replace("<!-- TITLE -->", title)
         text = text.replace("<!-- HEADER -->", '\n'.join(headers))

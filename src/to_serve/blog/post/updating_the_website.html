@@ -1,0 +1,99 @@
+<div class="article">
+<!-- F - post, U - update, D - delete -->
+<!-- U -->
+
+<div class="date">
+    <!-- Use :read !date_formatted_dots -->
+    Posted: 06.02.2022
+</div>
+<a href="#updating-the-website" id="updating-the-website">
+<h3> Updating the Website </h3>
+</a>
+<div class="tags">
+    <!-- Use tag snippet -->
+    <a href="/blog/tech.html">#tech</a>
+</div>
+<p>
+Incomprehensible and unstructured jumble of code scattered 
+across a range of highly specific tools that is one 
+typo away from crumbling into ruins.
+This is how I would describe
+</p>
+<h4>
+   My static-site generator
+</h4>
+<p>
+    To write a new article, I go to my blog-post directory,
+    open a new file with vim and use a snippet (powered by 
+    <a href="https://github.com/sirver/UltiSnips">
+       UltiSnips</a>)
+    that inputs an html template with todays date, it 
+    also uses some python to automatically set ids 
+    to article titles. <br>
+    After that I am free to use any html I please inside 
+    the article body. When I'm done, I set a flag 
+    (an html comment) to indicate to my site generator
+    that the article should be published/updated/deleted.
+</p>
+<p>
+    Yep, it's all plaintext. I don't know what will happen
+    if I mess up any of it.
+    <br>
+    This is how I roll.
+</p>
+<p>
+    The site-generator itself is written in python and 
+    just parses the file for the 
+    fields I mentioned and then compiles all blog-posts 
+    into html pages. It's NOT recommended for use yet but 
+    you can 
+    <a href="https://github.com/TeaWhyDee/teawd-site-generator">
+       check it out</a>.
+    What I would recommend is Luke Smith's 
+    <a href="https://github.com/LukeSmithxyz/lb">
+       lb</a>.
+</p>
+<h4>
+   So what's new? 
+</h4>
+<p>
+    New and fresh additions to the site:
+</p>
+<ul>
+    <li>
+        Posts are now tagged and
+        each tag has it's own page.
+    </li>
+    <li>
+        Each blog-post now has an id, try clicking on
+        the title of a post to get a link directly
+        to it!
+    </li>
+</ul>
+<p>
+    I also rewrote a lot of the code to make future 
+    changes easier. <br>
+</p>
+<h4>
+   What's in plans?
+</h4>
+<p>
+    I didn't have enough time to implement everything,
+    in the future you can expect:
+    <ul>
+        <li>
+            RSS feeds.
+        </li>
+        <li>
+            An index page and a separate page for each post.
+        </li>
+        <li>
+            Better explanation of the inner workings
+            and a more general implementation.
+        </li>
+    </ul>
+</p>
+<div class="links">
+    <a href="https://github.com/TeaWhyDee/teawd-site-generator">GitHub repo</a>
+</div>
+</div>
