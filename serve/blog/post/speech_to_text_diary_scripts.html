@@ -1,0 +1,186 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/style2.css">
+        <link rel="stylesheet" href="/css/header.css">
+        
+        <title>teawd's blog</title>
+    </head>
+    <body>
+        <nav>
+            <form>
+                <a class="button" href="/home.html" id="b2"> home </a>
+<a class="button" href="/blog.html" id="active"> blog </a>
+
+<a class="button" href="/art.html"> art </a>
+<a class="button" id="empty"> </a>
+
+            </form>
+        </nav>
+
+        <div class="article">
+
+
+
+<div class="date">
+    
+    Posted: 10.04.2022
+</div>
+
+<h3><a href="#speech-to-text-diary-scripts" id="speech-to-text-diary-scripts">
+        Speech to text diary scripts </a> </h3>
+<div class="tags">
+    
+    <a href="/blog/all.html">#all</a>
+        <a href="/blog/tech.html">#tech</a>
+        <a href="/blog/linux.html">#linux</a>
+</div>
+<p>
+First of all, this blog post is about a somewhat specific problem. Despite
+this, I think it is quite useful to most readers looking for some Linux
+knowledge as the tools I used are very general. Let's start with the
+explanation of
+</p>
+<h4>
+   The problem 
+</h4>
+<p>
+   Sometimes I have good ideas when I'm outside. Sometimes I really wanna
+   preserve these ideas, but it's very inconvenient to use phone keyboards,
+   especially on the move. One solution is recording my voice. But then, I
+   would want to transfer those recordings to my computer for future reference.
+   But what if I also want to read the text version of those voice recordings?
+   Let's handle these problems one at a time.
+</p>
+<h4>
+   Syncthing files
+</h4>
+<h5>
+   Syncthing 
+</h5>
+<p>
+<a href="https://syncthing.net/">
+   Syncthing</a> is an open source cross-platform program that can sync folders
+   accross multiple devices. It's perfect for this problem, as it allows for
+   P2P syncing (for example from a phone to a computer).
+   <br>
+   It's very easy to set up aswell, you download it on both devices, open a
+   browser (Synthing has a web frontend) tab on 127.0.0.1:8384 and scan the ID
+   QR with your phones camera. Then share whatever is the folder that has your
+   audio recordings.
+</p>
+<p>
+    If your init system is systemd, to start synthing (and enable autostart
+    at boot) you can run (where USER is your linux user):
+<code>
+    systemctl enable syncthing@USER.service --now
+</code>
+   Synthing has configuration options for encryption and file filtering.
+   If you want more robust syncing, you could also host a Syncthing instance 
+   on a server.
+</p>
+<h4>
+   Speech to text 
+</h4>
+<p>
+   To convert my speech to text I use the SpeechRecognition python package:
+   <code>
+      pip install SpeechRecognition 
+   </code>
+   It supports many speech recognition options, including offline ones.
+   It's also really easy to use, check 
+   <a href="https://github.com/TeaWhyDee/public-scripts/blob/master/phone_diary/recognize.py">
+      my script</a>.
+</p>
+<p>
+    Options (present in my script as comments):
+    <ul>
+        <li>
+            Pocketsphinx (low-accuracy offline option): 
+            <code>
+                pip install pocketsphinx
+            </code>
+        </li>
+        <li>
+            Google translate (has a limit on length)
+        </li>
+        <li>
+            Google cloud (free, requires registration) 
+        </li>
+    </ul>
+</p>
+<p>
+There are also other online and offline options.
+<a href="https://pypi.org/project/SpeechRecognition/">
+    (SpeechRecognition documentation)</a>
+</p>
+<h4>
+    Storing recorings in notes
+</h4>
+<h5>
+   Vimwiki 
+</h5>
+<p>
+    I use vimwiki 
+    <a href="https://github.com/vimwiki/vimwiki">
+       vimwiki</a> (a (neo)vim plugin) that makes managing markdown files in a
+   wiki-like manner extremely easy. Vimwiki also has a diary option. To store
+   the recording path and text in my notes, I wrote a few scripts.
+</p>
+<p>
+    The speech-to-diary.sh script calls the speech recognition script 
+    on a selected file, appends transcription to a vimwiki diary and 
+    (optionally) moves the voice recording to the vimwiki folder.
+    it has a bunch of flags, you can get a help message by running:
+    <code>
+       ./speech-to-diary.sh -h 
+    </code>
+</p>
+<p>
+    The text that it puts looks like this:
+    <code>
+        20220328_162342.m4a 16:24:05  <br>
+        Whatever speech recognition returned <br>
+        /home/tea/vimwiki/diary/resources/20220328_162342.wav
+    </code>
+    I have a vim shortcut that plays an audio file under the cursor so that
+    I can also listen to it if the transcription is not accurate enough.
+</p>
+<p>
+   If you don't use vim or vimwiki, you can just change the last 
+   line of the script to save the text to a file of your choosing.
+</p>
+<h4>
+   Tying it all together 
+</h4>
+<h5>
+   Actual Linux knowledge 
+</h5>
+<p>
+   Now, we need a way to react to new files appearing in the syncing 
+   directory. For that, we can use the linux inotify interface, that 
+   waits for changes in files. For syncthing, the following command
+   works:
+   <code>
+       inotifywait -c -r -m -e attrib $PATH_TO_WATCH
+   </code>
+   You can also see it used in a script. Be sure to read the readme
+   on the repo for some additional information on setting up
+   a systemd service (if you don't know how).
+</p>
+<p>
+   Now, if you autostart syncthing and the watchscript at system boot, it 
+   will process all new audio files.
+</p>
+<div class="links">
+    <a href="https://github.com/TeaWhyDee/public-scripts/tree/master/phone_diary">
+       GH Repo</a>
+    <a href="https://pypi.org/project/SpeechRecognition/">
+       SpeechRec docs</a>
+</div>
+</div>
+    </body>
+</html>

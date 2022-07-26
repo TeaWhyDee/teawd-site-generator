@@ -1,0 +1,1002 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/css" href="rss.css" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+
+<channel>
+<title>Teawd's blog#all</title>
+<description>Full size posts from teawide.xyz/blog/all</description>
+<language>en-us</language>
+<link>https://teawide.xyz/blog/all.xml</link>
+<atom:link href="https://teawide.xyz/blog/all.xml" rel="self" type="application/rss+xml" />
+
+<item>
+    <title>Complexity in art</title>
+    <guid>https://teawide.xyz/blog/post/complexity_in_art.html</guid>
+    <link>https://teawide.xyz/blog/post/complexity_in_art.html</link>
+    <pubDate>Wed, 20 Jul 2022 00:00:00 +0000
+</pubDate>
+    <description><![CDATA[
+
+
+<div class="date">
+    
+    Posted: 20.07.2022
+</div>
+<h3><a href="#complexity-in-art" id="complexity-in-art">
+Complexity in art</a></h3>
+<div class="tags">
+    
+    <a href="/blog/all.html">#all</a>
+    <a href="/blog/art.html">#art</a>
+    <a href="/blog/personal.html">#personal</a>
+</div>
+<p>
+I might be stating the obvious, but I don't think there is any objective value
+to an art piece, except, maybe, it's historical value.
+<br>
+What I wanna talk about, is what makes an art pirece feel more valuable to me.
+One obvious thing is the context. A lot of my favorite music and visual
+artwork comes from games and movies I really like. I'd say it could be
+thought of as personal historical value, it makes you remember the story and
+its characters. Another thing is complexity.
+</p>
+<h5>
+   Hiding in plain sight
+</h5>
+<p>
+   One way to achieve complexity, is to have details or shapes that are not
+   obvious on first viewing. A great example is this Hyper Light Drifter
+   artwork I have as a poster. 
+<a href="https://www.fangamer.com/products/hld-poster-fallen">
+<img src="/resources/HLD/poster.png" id="smallimg"
+alt="https://www.fangamer.com/products/hld-poster-fallen"/>
+</a>
+   Can you see a hand and a skull of a giant that form the rock?
+   Some other details require familiarity with the game to notice. Discovering
+   these was very satisfying.
+</p>
+<h5>
+   Telling a story
+</h5>
+<p>
+   A lot of art also tries to convey some idea or commentary. Sometimes it's
+   explicit, sometimes hidden in metaphors and puzzles. I love when an artpiece
+   leaves a lot to interpretation, a great example I can think of is <a
+   href="https://www.youtube.com/c/vewnscape/videos">vewns animations</a>:
+   surface level topics and ideas are clear, others require multiple watches
+   and some thinking to understand, but still leave some ambiguity.
+   Unfortunately, I'm not the best at deciphering metaphors, and even worse at
+   trying to come up with a metaphor that could convey some of my feelings or
+   ideas.
+</p>
+<h5>
+   Putting secrets
+</h5>
+<p>
+    Doesn't really add complexity in the same sense, but
+   what I recently came to like to do is putting ARG-like hidden messages in
+   some of the art I make. 
+   It's mostly to satisfy those like me, who like those kinds
+   of things.
+</p>
+<p>
+   On that note here's an art piece I finished recently. 
+   It's inspired by the art of False Noise, Hyper Light Drifter, and
+   Etiene Crauss. In 3 variants, because I couldn't decide on a 
+   color palette.
+</p>
+<div class="row">
+    <div class="column">
+        <a href="/resources/art/pawa/pawa_8x.png">
+        <img src="/resources/art/pawa/pawa_8x.png" alt="abstract pixel art"/>
+        </a>
+    </div>
+    <div class="column">
+        <a href="/resources/art/pawa/pawa_h_8x.png">
+        <img src="/resources/art/pawa/pawa_h_8x.png" alt="abstract pixel art"/>
+        </a>
+    </div>
+    <div class="column">
+        <a href="/resources/art/pawa/pawa_i_8x.png">
+        <img src="/resources/art/pawa/pawa_i_8x.png" alt="abstract pixel art"/>
+        </a>
+    </div>
+</div>
+<p>
+    Thanks for reading my surface level thoughts on art. 
+    And while these complexities are cool, I don't want to overthink them,
+    so expect some more "simple" art.
+</p>
+<p>
+   BTW my art and project files are licenced under CC0.
+</p>
+<div class="links">
+    <a href="/resources/art/pawa/pawa.kra">.kra file (634KB)</a>
+</div>
+
+    ]]></description>
+    </item><item>
+    <title>Speech to text diary scripts</title>
+    <guid>https://teawide.xyz/blog/post/speech_to_text_diary_scripts.html</guid>
+    <link>https://teawide.xyz/blog/post/speech_to_text_diary_scripts.html</link>
+    <pubDate>Sun, 10 Apr 2022 00:00:00 +0000
+</pubDate>
+    <description><![CDATA[
+
+
+<div class="date">
+    
+    Posted: 10.04.2022
+</div>
+
+<h3><a href="#speech-to-text-diary-scripts" id="speech-to-text-diary-scripts">
+        Speech to text diary scripts </a> </h3>
+<div class="tags">
+    
+    <a href="/blog/all.html">#all</a>
+        <a href="/blog/tech.html">#tech</a>
+        <a href="/blog/linux.html">#linux</a>
+</div>
+<p>
+First of all, this blog post is about a somewhat specific problem. Despite
+this, I think it is quite useful to most readers looking for some Linux
+knowledge as the tools I used are very general. Let's start with the
+explanation of
+</p>
+<h4>
+   The problem 
+</h4>
+<p>
+   Sometimes I have good ideas when I'm outside. Sometimes I really wanna
+   preserve these ideas, but it's very inconvenient to use phone keyboards,
+   especially on the move. One solution is recording my voice. But then, I
+   would want to transfer those recordings to my computer for future reference.
+   But what if I also want to read the text version of those voice recordings?
+   Let's handle these problems one at a time.
+</p>
+<h4>
+   Syncthing files
+</h4>
+<h5>
+   Syncthing 
+</h5>
+<p>
+<a href="https://syncthing.net/">
+   Syncthing</a> is an open source cross-platform program that can sync folders
+   accross multiple devices. It's perfect for this problem, as it allows for
+   P2P syncing (for example from a phone to a computer).
+   <br>
+   It's very easy to set up aswell, you download it on both devices, open a
+   browser (Synthing has a web frontend) tab on 127.0.0.1:8384 and scan the ID
+   QR with your phones camera. Then share whatever is the folder that has your
+   audio recordings.
+</p>
+<p>
+    If your init system is systemd, to start synthing (and enable autostart
+    at boot) you can run (where USER is your linux user):
+</p><p>
+    systemctl enable syncthing@USER.service --now
+</p><p>
+   Synthing has configuration options for encryption and file filtering.
+   If you want more robust syncing, you could also host a Syncthing instance 
+   on a server.
+</p>
+<h4>
+   Speech to text 
+</h4>
+<p>
+   To convert my speech to text I use the SpeechRecognition python package:
+   </p><p>
+      pip install SpeechRecognition 
+   </p><p>
+   It supports many speech recognition options, including offline ones.
+   It's also really easy to use, check 
+   <a href="https://github.com/TeaWhyDee/public-scripts/blob/master/phone_diary/recognize.py">
+      my script</a>.
+</p>
+<p>
+    Options (present in my script as comments):
+    <ul>
+        <li>
+            Pocketsphinx (low-accuracy offline option): 
+            </p><p>
+                pip install pocketsphinx
+            </p><p>
+        </li>
+        <li>
+            Google translate (has a limit on length)
+        </li>
+        <li>
+            Google cloud (free, requires registration) 
+        </li>
+    </ul>
+</p>
+<p>
+There are also other online and offline options.
+<a href="https://pypi.org/project/SpeechRecognition/">
+    (SpeechRecognition documentation)</a>
+</p>
+<h4>
+    Storing recorings in notes
+</h4>
+<h5>
+   Vimwiki 
+</h5>
+<p>
+    I use vimwiki 
+    <a href="https://github.com/vimwiki/vimwiki">
+       vimwiki</a> (a (neo)vim plugin) that makes managing markdown files in a
+   wiki-like manner extremely easy. Vimwiki also has a diary option. To store
+   the recording path and text in my notes, I wrote a few scripts.
+</p>
+<p>
+    The speech-to-diary.sh script calls the speech recognition script 
+    on a selected file, appends transcription to a vimwiki diary and 
+    (optionally) moves the voice recording to the vimwiki folder.
+    it has a bunch of flags, you can get a help message by running:
+    </p><p>
+       ./speech-to-diary.sh -h 
+    </p><p>
+</p>
+<p>
+    The text that it puts looks like this:
+    </p><p>
+        20220328_162342.m4a 16:24:05  <br>
+        Whatever speech recognition returned <br>
+        /home/tea/vimwiki/diary/resources/20220328_162342.wav
+    </p><p>
+    I have a vim shortcut that plays an audio file under the cursor so that
+    I can also listen to it if the transcription is not accurate enough.
+</p>
+<p>
+   If you don't use vim or vimwiki, you can just change the last 
+   line of the script to save the text to a file of your choosing.
+</p>
+<h4>
+   Tying it all together 
+</h4>
+<h5>
+   Actual Linux knowledge 
+</h5>
+<p>
+   Now, we need a way to react to new files appearing in the syncing 
+   directory. For that, we can use the linux inotify interface, that 
+   waits for changes in files. For syncthing, the following command
+   works:
+   </p><p>
+       inotifywait -c -r -m -e attrib $PATH_TO_WATCH
+   </p><p>
+   You can also see it used in a script. Be sure to read the readme
+   on the repo for some additional information on setting up
+   a systemd service (if you don't know how).
+</p>
+<p>
+   Now, if you autostart syncthing and the watchscript at system boot, it 
+   will process all new audio files.
+</p>
+<div class="links">
+    <a href="https://github.com/TeaWhyDee/public-scripts/tree/master/phone_diary">
+       GH Repo</a>
+    <a href="https://pypi.org/project/SpeechRecognition/">
+       SpeechRec docs</a>
+</div>
+
+    ]]></description>
+    </item><item>
+    <title>Simple video editing with MPV</title>
+    <guid>https://teawide.xyz/blog/post/simple_video_editing_with_mpv.html</guid>
+    <link>https://teawide.xyz/blog/post/simple_video_editing_with_mpv.html</link>
+    <pubDate>Sun, 13 Mar 2022 00:00:00 +0000
+</pubDate>
+    <description><![CDATA[
+
+
+<div class="date">
+    
+    Posted: 13.03.2022
+</div>
+<h3><a href="#simple-video-editing-with-mpv" id="simple-video-editing-with-mpv">
+ Simple video editing with MPV </a></h3>
+
+<div class="tags">
+    
+    <a href="/blog/all.html">#all</a>
+        <a href="/blog/tech.html">#tech</a>
+        <a href="/blog/linux.html">#linux</a>
+</div>
+<p>
+MPV is one of my favorite open source projects. It's a simple-looking 
+video player with an enormous amount of features while also being 
+highly extensible through the lua programming language.
+</p>
+<h4>
+   MPV-splice Script 
+</h4>
+<p>
+    MPV-splice is a script that allows you to use MPV as a video editor.
+    You set the start and end timings for fragments, and then 
+    the script cuts the video and concatenates the fragments.
+</p>
+<p>
+   I made a fork of it to extend it's abilities.
+   <ul>
+       <li>
+           I added an option to automatically upload
+            the video (to any platform, but the default config works for Streamable).
+       </li>
+       <li>
+           I added an option to reencode the video, making the timings frame perfect.
+           By default, the script does not reencode the video, allowing for extremely 
+           fast results.
+       </li>
+       <li>
+           I fixed the editing of online videos. The script will only download the 
+           selected portions of the video, which allows you to cut out fragments of even
+           hours long YouTube videos for example.
+       </li>
+   </ul>
+</p>
+<p>
+   Another useful script I forked is 8mb, which compresses your video to 8mb, changing
+   it's FPS and resolution to appropriate values.
+</p>
+<div class="links">
+   <a href="https://github.com/TeaWhyDee/mpv-yt-splice">mpv-splice repo</a>
+   <a href="https://github.com/TeaWhyDee/public-scripts">public-scripts(includes 8mb)</a>
+</div>
+
+    ]]></description>
+    </item><item>
+    <title>Hyper Light Drifters magnificent sound</title>
+    <guid>https://teawide.xyz/blog/post/hyper_light_drifters_magnificent_sound.html</guid>
+    <link>https://teawide.xyz/blog/post/hyper_light_drifters_magnificent_sound.html</link>
+    <pubDate>Sun, 06 Mar 2022 00:00:00 +0000
+</pubDate>
+    <description><![CDATA[
+
+
+<div class="date">
+    
+    Posted: 06.03.2022
+</div>
+<h3><a href="#hyper-light-drifters-magnificent-sound" id="hyper-light-drifters-magnificent-sound">
+ Hyper Light Drifters magnificent sound </a></h3>
+
+<div class="tags">
+    
+    <a href="/blog/all.html">#all</a>
+        <a href="/blog/personal.html">#personal</a>
+</div>
+<p>
+I first played Hyper Light Drifter 4 years ago, it quickly
+became one of my favorite games. Recently, during some stressful times,
+I decided to listen to it's soundtrack again. At the end, I cried.
+    <a href="/resources/HLD/screenshot.png">
+    <img src="/resources/HLD/screenshot.png" alt="screenshot"/>
+    </a>
+</p>
+<h4>
+   Hyper Light Drifter
+</h4>
+<p>
+   The game is set in a post-apocalyptic 
+   world, where nature has overtaken most structures
+   and the survivors have either gone mad and murderous
+   or gone into hiding trying preserve what's little left of the old world.
+   It hits every point for me: 
+   great exploration, hard but fair challenge and combat,
+   simple but fun mechanics, awe-inspiring art and animation. And
+   of course its dialogue-less story.
+</p>
+<h4>
+   Echoes of the dead world 
+</h4>
+<p>
+    What really made this game so special for me though in its music
+    and sound design. 
+    Composed by the great Disasterpeace, the music stands on it's own 
+    unlike anything I've ever heard. The uniqueness and
+    the impressionistic style of it perfectly intertwines with 
+    the cryptic and beautiful world of Hyper Light Drifter.
+    <video controls src="/resources/HLD/HLD2.mp4" alt="game footage"/>
+</p>
+<p>
+    The music captures the feeling of every space you encounter -
+    be it vast underground catacombs or a calm forest growing on 
+    the remains of giant war machines, the echoes of which you 
+    can hear in the distance - transitioning
+    seemlessly from one area to another. The game also knows 
+    when to use silence, leaving you with the ambience of the area.
+</p>
+<p>
+   Replaying the game I noticed so many new details, nearly every area 
+   has some effect on the soundtrack, you can hear the crackling of 
+   thousand year old trees and the slight buzz of ancient technologies.
+   <br> And this guy playing his guitar :)
+   <video controls src="/resources/HLD/HLD3.mp4" alt="game footage"/>
+</p>
+<p>
+    My favorite track is titled "Panacea", 
+    the feelings it envokes in me is 
+    unmatched by any other music-piece. It perfectly captured
+    my melancholic mood. It let me cry out all of my frustrations 
+    and I'm grateful for that.
+</p>
+<p>
+   I don't like spoilers. And this post was as spoiler-free as I could get it.
+   I didn't show any big encounters, any big reveals. But I hope you will look
+   more into this game and listen to every little detail on your playthrough!
+</p>
+<div class="links">
+    <a href="https://www.heartmachine.com/hyper-light-drifter"> HLD official website </a>
+    <a href="https://music.disasterpeace.com/album/hyper-light-drifter"> Soundtrack (Bandcamp) </a>
+</div>
+
+    ]]></description>
+    </item><item>
+    <title>Music Playing: Local n Remote</title>
+    <guid>https://teawide.xyz/blog/post/music_playing_local_and_remote.html</guid>
+    <link>https://teawide.xyz/blog/post/music_playing_local_and_remote.html</link>
+    <pubDate>Sun, 20 Feb 2022 00:00:00 +0000
+</pubDate>
+    <description><![CDATA[
+
+
+<div class="date">
+    
+    Posted: 20.02.2022
+    | Updated: 23.02.2022
+</div>
+<h3><a href="#music-players-local-&-remote" id="music-players-local-&-remote">
+ Music Playing: Local & Remote </a></h3>
+
+<div class="tags">
+    
+    <a href="/blog/all.html">#all</a>
+        <a href="/blog/linux.html">#linux</a>
+        <a href="/blog/tech.html">#tech</a>
+</div>
+<p>
+This blog-post is about my experience of playing music on Linux, although pretty much all
+software I mention here works on Windows, Mac, Linux.. and even Android.
+</p>
+<h4>
+   Browser as a Music Player 
+</h4>
+<p>
+   The most basic way to play music is using some website.
+   Most people prefer Spotify, but I personally hate it's interface 
+   almost as much as I hate subscription services.
+</p>
+<p>
+   For the longest time I've been using 
+   <em class="orange">
+       Soundcloud</em>, it has most music I like, 
+   especially the quirky electronic type, all for free.
+    It also allows you to upload songs without 
+    any additional setup. But,
+   of course, there are songs that are not on there. 
+   The worst part is that some more main-stream artists
+   have their songs region-locked or only available with
+   soundcloud premium.
+</p>
+<h4>
+   Local Music Library 
+</h4>
+<p>
+   A year back I decided to begin storing my music locally.
+   This approach ensures that I have access to all my
+   favorite music, in best quality, offline, forever.
+</p>
+<p>
+   It is honestly really freeing and opened a bunch of 
+   possibilities for me.
+</p>
+<h5>
+   DeaDBeeF Music Player 
+</h5>
+<p>
+   I first settled on DeaDBeeF, as it's highly customisable,
+   extensible and actively developed.
+</p>
+<p>
+   Configuring takes some time to get used to. 
+   You have to enable 'design mode' in the 'View' submenu to 
+   start adding and removing panes. It allows you to use a lot of 
+   GTK3 (UI library) widgets to structure your window 
+   however you like. 
+   <a href="/resources/music_playing/deadbeef_screenshot.png">
+       <img src="/resources/music_playing/deadbeef_screenshot.png" alt=""/>
+   </a>
+   You can find my config in the GitHub repo linked below. 
+</p>
+<p>
+    I especially like the visualization plugins that I found.
+    On Arch-based systems it is extremely easy to install plugins:
+    </p><p>
+        yay -S deadbeef-plugin-spectrogram-gtk3-git \ <br>
+        deadbeef-plugin-musical-spectrum-gtk3-git \ <br>
+        deadbeef-plugin-rating \ <br>
+        deadbeef-plugin-waveform-gtk3-git <br>
+    </p><p>
+    Some plugins are configured through settings, others through
+    the right-click menu.
+</p>
+<p>
+   There are 2 main problems with DeaDBeeF for me:
+</p>
+   <ul>
+       <li>
+           Lack of dynamic playlists or being able to go though
+            artsts/albums without creating playlists for them manually.
+        </li>
+        <li>
+            No playback queue display (it only shows the song position
+            in the queue next to it).
+        </li>
+   </ul>
+<p>
+   Both of these features are in plans so at some point in the future
+   I hope we'll get them.
+</p>
+<h5>
+   MPD Music Server
+</h5>
+<p>
+   Recently I started using 
+   <a href="https://github.com/MusicPlayerDaemon/MPD">
+      MPD</a>. It is even more technical than
+   DeaDBeeF. It allows you to connect to it through a socket.
+</p>
+<p>
+   All of it might sound scary but all you need to do to set it up 
+   is create 1 config file. There are a lot of clients that 
+   allow you to connect to an MPD server with relatively conventional
+   interfaces. I am currently using 
+   <a href="https://github.com/cdrummond/cantata">
+      Cantata</a>, as it's the most feature rich one I could find.
+</p>
+<p>
+   The great thing about MPD is that you can connect as many clients 
+   as you want and they all will be synchronized with each other.
+   There are clients for scrobbling your music to 
+   <a href="https://last.fm">
+      last.fm</a> (with <em>mpdas</em>),
+  setting your discord 'rich presense' and controlling 
+  playback with media keys or a notification (with <em>mpdris2</em>).
+  It's the most modular music playing experience and I love it.
+  My config looks like this:
+ </p><p>
+     music_directory    "~/Music" <br>
+     db_file            "~/.config/mpd/database" <br>
+     playlist_directory "~/.config/mpd/playlists" <br>
+     sticker_file       "~/.config/mpd/sticker.sql" <br>
+     log_file           "syslog" <br>
+     auto_update "yes" <br>
+     restore_paused "yes" <br>
+<br>
+     audio_output { <br>
+     type    "pulse" <br>
+     name    "pulse audio" <br>
+     } <br>
+<br>
+audio_output { <br>
+     type    "fifo" <br>
+     name    "my_fifo" <br>
+     path    "/tmp/mpd.fifo" <br>
+     format  "22050:16:2" <br>
+     } <br>
+ </p><p> 
+ 'sticker_file' allows for custom music ratings (supported by Cantata),
+ 'fifo' audio output allows for latency-less audio
+ visualization with 
+ <a href="https://github.com/jarcode-foss/glava">
+    Glava</a>.
+    </p>
+<p>
+    To install everything I mentioned on Arch you would run: 
+    </p><p>
+        yay -S mpd mpd-discord-rpc-git mpdas mpdris2 cantata 
+    </p><p>
+</p>
+
+<h4>
+   Remote Music Library 
+</h4>
+<p>
+   But what if I want to play my music on a device where 
+   I don't have my audio library?
+</p>
+<h5>
+   MPD Does it All 
+</h5>
+<p>
+   You can create an http output by putting the following lines
+   in your config:
+   </p><p>
+       audio_output { <br>
+       type        "httpd" <br>
+       name        "My HTTP Stream" <br>
+       encoder        "lame" <br>
+       port        "8000" <br>
+       bitrate        "192" <br>
+       format        "44100:16:1" <br>
+       max_clients    "0" # 0=no limit <br>
+       }  <br>
+   </p><p>
+   I host an MPD instance on my server and can control playback with 
+   any client. On my phone I use
+   <a href="https://f-droid.org/en/packages/com.namelessdev.mpdroid/">
+      MPDroid</a> (which can also stream the aduio).
+    To stream audio on desktop you have to connect to the specified port
+    through a music player that can play http streams, like mpv,
+    or a web browser. 
+    MPD clients, such as Cantata, can also play http audio streams.  
+    The delay is a little annoying. There is a setup that allows for 0 delay
+    playback ( with local mpd using a remote music library) I saw here:
+    <a href="https://www.joram.io/blog/android-streaming-mpd/">
+       www.joram.io/blog/android-streaming-mpd/</a>
+</p>
+<h4>
+   But I want my recommendations!
+</h4>
+<h5>
+   MPD :) 
+</h5>
+<p>
+There is a 
+<a href="https://github.com/saelz/mpd-auto-queue">
+    client</a>
+that automatically queues new songs based on
+last.fm recommendations.
+</p>
+<div class="links">
+    <a href="https://github.com/TeaWhyDee/public-dotfiles"> .files GitHub </a>
+</div>
+
+    ]]></description>
+    </item><item>
+    <title>Updating the Website</title>
+    <guid>https://teawide.xyz/blog/post/updating_the_website.html</guid>
+    <link>https://teawide.xyz/blog/post/updating_the_website.html</link>
+    <pubDate>Sun, 06 Feb 2022 00:00:00 +0000
+</pubDate>
+    <description><![CDATA[
+
+
+<div class="date">
+    
+    Posted: 06.02.2022
+</div>
+<h3><a href="#updating-the-website" id="updating-the-website">
+ Updating the Website </a></h3>
+
+<div class="tags">
+    
+    <a href="/blog/all.html">#all</a>
+    <a href="/blog/tech.html">#tech</a>
+</div>
+<p>
+Incomprehensible and unstructured jumble of code scattered 
+across a range of highly specific tools that is one 
+typo away from crumbling into ruins.
+This is how I would describe
+</p>
+<h4>
+   My static-site generator
+</h4>
+<p>
+    To write a new article, I go to my blog-post directory,
+    open a new file with vim and use a snippet (powered by 
+    <a href="https://github.com/sirver/UltiSnips">
+       UltiSnips</a>)
+    that inputs an html template with todays date, it 
+    also uses some python to automatically set ids 
+    to article titles. <br>
+    After that I am free to use any html I please inside 
+    the article body. When I'm done, I set a flag 
+    (an html comment) to indicate to my site generator
+    that the article should be published/updated/deleted.
+</p>
+<p>
+    Yep, it's all plaintext. I don't know what will happen
+    if I mess up any of it.
+    <br>
+    This is how I roll.
+</p>
+<p>
+    The site-generator itself is written in python and 
+    just parses the file for the 
+    fields I mentioned and then compiles all blog-posts 
+    into html pages. It's NOT recommended for use yet but 
+    you can 
+    <a href="https://github.com/TeaWhyDee/teawd-site-generator">
+       check it out</a>.
+    What I would recommend is Luke Smith's 
+    <a href="https://github.com/LukeSmithxyz/lb">
+       lb</a>.
+</p>
+<h4>
+   So what's new? 
+</h4>
+<p>
+    New and fresh additions to the site:
+</p>
+<ul>
+    <li>
+        Posts are now tagged and
+        each tag has it's own page.
+    </li>
+    <li>
+        Each blog-post now has an id, try clicking on
+        the title of a post to get a link directly
+        to it!
+    </li>
+</ul>
+<p>
+    I also rewrote a lot of the code to make future 
+    changes easier. <br>
+</p>
+<h4>
+   What's in plans?
+</h4>
+<p>
+    I didn't have enough time to implement everything,
+    in the future you can expect:
+    <ul>
+        <li>
+            RSS feeds.
+        </li>
+        <li>
+            An index page and a separate page for each post.
+        </li>
+        <li>
+            Better explanation of the inner workings
+            and a more general implementation.
+        </li>
+    </ul>
+</p>
+<div class="links">
+    <a href="https://github.com/TeaWhyDee/teawd-site-generator">GitHub repo</a>
+</div>
+
+    ]]></description>
+    </item><item>
+    <title>Writing GUI to make weird designs</title>
+    <guid>https://teawide.xyz/blog/post/writing_gui_to_make_weird_designs.html</guid>
+    <link>https://teawide.xyz/blog/post/writing_gui_to_make_weird_designs.html</link>
+    <pubDate>Sun, 30 Jan 2022 00:00:00 +0000
+</pubDate>
+    <description><![CDATA[
+
+
+<div class="date">
+    
+    Posted: 30.01.2022 | Updated: 06.02.2022
+</div>
+<h3><a href="#writing-gui-to-make-weird-designs" id="writing-gui-to-make-weird-designs">
+ Writing GUI to make weird designs </a></h3>
+
+<div class="tags">
+    
+    <a href="/blog/all.html">#all</a>
+    <a href="/blog/tech.html">#tech</a>
+    <a href="/blog/art.html">#art</a>
+</div>
+<p>
+    Hello! First week already proved challenging.
+    Unfortunately I fell ill which also made it more difficult
+    to finish something meaningful in time, but I have some results.
+</p>
+    <h4> The Idea </h4>
+<p>
+    I really like art based around very simple concepts.
+    An example of such a concept is pixel art.
+    The idea of pixel art is about as simple as it gets -
+    you draw with little squares.
+    So, I was doodling around trying to come up with something
+    similar that looks cool.
+    <a href="/resources/design_program/sketch.png">
+    <img id="medimg" src="/resources/design_program/sketch.png" alt="sketch"/>
+    </a>
+    I came up with a modification of pixel art,
+    with non-parallel lines and variable line width.
+    I tried recreating it in
+    inkscape, but quickly encountered multiple problems, like
+    differently angled lines being at different distances from each
+    other and the ends of lines looking off.
+</p>
+    <h4> How to GUI </h4>
+<p>
+    In the end I just decided to write my own program to make 
+    this kind of designs. Only experience writing GUI I had 
+    was using QT (C++); it was painful. I decided instead to 
+    use Godot, as using a python-like language with dynamically
+    typed variables seemed like a much better idea for a GUI.
+</p>
+<p>
+    I had a few ideas I wanted to implement in my Goo-e: 
+    shortcuts that the user can set/unset just by right-clicking 
+    the element instead of going into settings menu and 
+    searching for it there (I prototyped it but didn't yet use).
+    Another idea was giving the user to ability to save
+    any value as default (again, by right-clicking), for
+    now I implemented it with a button next to a value.
+</p>
+    <h4> How do I optimize this ;-; </h4>
+<p>
+    <a href="/resources/design_program/ui_screenshot.png">
+    <img src="/resources/design_program/ui_screenshot.png" alt="program screenshot"/>
+    </a>
+    As you can see the UI is incredibly bare-bones. Main features 
+    are there: you can pan, zoom, draw and erase lines on a grid.
+    Changing the angle of the grid is incredibly laggy as the code
+    has to update a huge amount of individual nodes (objects).
+    I will probably completely rewrite the entire program at 
+    some point.
+</p>
+    <h4> Was it worth it? </h4>
+<p>
+    Writing an entire program just to make this very specific 
+    type of designs might seems silly, especially considering
+    how I realised that this effect can be achieved just by
+    applying a simple image transform on a picture made using
+    a normal square grid.
+</p>
+<p>
+    Regardless, the experience is valuable.
+    I felt good programming, abusing the hell
+    out of Godot's signal system and other features that make 
+    my life just a little bit easier. And damn does it feel 
+    good accomplishing something at the end of the week and
+    posting about it here. Here is something I doodled in 
+    the program: see if you can figure out what it says, 
+    each letter is made out of 1 line.
+    <a href="/resources/design_program/design.png">
+    <img src="/resources/design_program/design.png" alt="pic"/>
+    </a>
+    That's it for this week! Let's see what lies ahead :)
+    
+</p>
+<div class="links">
+    <a href="https://github.com/TeaWhyDee/angled-grid-draw">
+        GitHub repo
+    </a>
+</div>
+
+    ]]></description>
+    </item><item>
+    <title>Weekly Blog Posts</title>
+    <guid>https://teawide.xyz/blog/post/weekly_blog_posts.html</guid>
+    <link>https://teawide.xyz/blog/post/weekly_blog_posts.html</link>
+    <pubDate>Sun, 23 Jan 2022 00:00:00 +0000
+</pubDate>
+    <description><![CDATA[
+
+
+<div class="date">
+    
+    Posted: 23.01.2022
+</div>
+<h3><a href="#weekly-blog-posts" id="weekly-blog-posts">
+ Weekly Blog Posts </a></h3>
+
+<div class="tags">
+    
+    <a href="/blog/all.html">#all</a>
+    <a href="/blog/personal.html">#personal</a>
+</div>
+<p>
+    Hello. I've decided that I need to make weekly posts.
+    And not just weekly posts, I need to have meaningful 
+    weekly posts, about projects.
+    I think this would motivate me to make plans and
+    deliver on them. And to make sure that I don't 
+    skip a week, I will donate 1000 rubles for every 
+    week skipped to a charity of my choosing.
+    <br>
+        And well, since I just came up with this idea
+    and didn't have a week to prepare, I will share
+    some random abstract pixel art I made recently:
+    
+    <a href="/resources/work_day_pixel_art.png">
+    <img id="medimg" src="/resources/work_day_pixel_art.png" alt="pixel art"/>
+    </a>
+
+</p>
+<div class="links">
+    <a href="/resources/work_day_pixel_art_pixel.png">
+        Original size pixel art
+    </a>
+</div>
+
+    ]]></description>
+    </item><item>
+    <title>15 Day Challenge: Drawing</title>
+    <guid>https://teawide.xyz/blog/post/15_day_challenge_drawing.html</guid>
+    <link>https://teawide.xyz/blog/post/15_day_challenge_drawing.html</link>
+    <pubDate>Sat, 31 Jul 2021 00:00:00 +0000
+</pubDate>
+    <description><![CDATA[
+
+<div class="date">
+    Posted: 31.07.2021
+</div>
+<h3><a href="#15-day-challenge-drawing" id="15-day-challenge-drawing">
+ 15 Day Challenge: Drawing </a></h3>
+
+<div class="tags">
+    
+    <a href="/blog/all.html">#all</a>
+    <a href="/blog/art.html">#art</a>
+</div>
+<p>
+Me and my friend PizzArt decided to do 15 day long art challenges.
+It is definitely a great way to make yourself learn something new.
+You are motivated by 2 powerful things: deadlines - 1 piece everyday,
+responsibility - your friend is expecting you, so you can't skip a
+day for silly reasons.
+<a href="/resources/ArtChal1/ArtChal_prev1.jpg">
+    <img src="/resources/ArtChal1/ArtChal_prev1.jpg" alt="Compilation of 4 hand-drawn images"/>
+
+</p>
+<p>
+4 of the images were drawn with pen and pencil, everything else
+was drawn digitally in Krita (would recommend for painting).
+I used filter and concept art brush packs from
+<a href="https://docs.krita.org/en/resources_page.html">Krita's website</a>.
+You can download the images and project files below if you want.
+As you can see, the reference photos are also included.
+<a href="/resources/ArtChal1/ArtChal_prev2.jpg">
+    <img src="/resources/ArtChal1/ArtChal_prev2.jpg" alt="Compilation of digital drawings"/>
+
+Check out PizzArt's drawings on
+<a href="https://pizzart.github.io/blog.html"> his blog</a>.
+</p>
+<div class="links">
+    <a href="/resources/ArtChal1/AC_Jul2021_pictures.zip">Drawings (24M)</a>
+    <a href="https://mega.nz/file/QKA0iRDJ#TCjW6NNAAShraIpkb9hBOZwM3YFVc2a3B0EmGw_q2TI">.kra files (154M)</a>
+</div>
+
+    ]]></description>
+    </item><item>
+    <title>Website Artwork</title>
+    <guid>https://teawide.xyz/blog/post/website_artwork.html</guid>
+    <link>https://teawide.xyz/blog/post/website_artwork.html</link>
+    <pubDate>Mon, 26 Jul 2021 00:00:00 +0000
+</pubDate>
+    <description><![CDATA[
+
+<div class="date"> 
+    Posted: 26.07.2021 | Updated: 26.07.2021 
+</div>
+<h3><a href="#website-artwork" id="website-artwork">
+ Website Artwork </a></h3>
+
+<div class="tags">
+    
+    <a href="/blog/all.html">#all</a>
+    <a href="/blog/art.html">#art</a>
+</div>
+
+<p>
+This was the first time I ever used Inkscape. Surpisingly
+easy to use, the interface also looks nice. 
+Great open-source program! 
+This post will (hopefully) be updated in the future.
+<a href="/resources/Screenshot-Inkscape.png">
+    <img src="/resources/Screenshot-Inkscape.png" alt="Screenshot of Inkscape"/>
+
+</p>
+
+<div class="links">
+    <a href="/resources/website_content.zip"> .svg files (113K) </a>
+    <a href="https://inkscape.org/"> Inkscape.org </a>
+</div>
+
+    ]]></description>
+    </item>
+
+</channel>
+</rss>
+

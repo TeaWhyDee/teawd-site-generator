@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/css" href="rss.css" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+
+<channel>
+<title>Teawd's blog#art</title>
+<description>Full size posts from teawide.xyz/blog/art</description>
+<language>en-us</language>
+<link>https://teawide.xyz/blog/art.xml</link>
+<atom:link href="https://teawide.xyz/blog/art.xml" rel="self" type="application/rss+xml" />
+
+<item>
+    <title>Complexity in art</title>
+    <guid>https://teawide.xyz/blog/post/complexity_in_art.html</guid>
+    <link>https://teawide.xyz/blog/post/complexity_in_art.html</link>
+    <pubDate>Wed, 20 Jul 2022 00:00:00 +0000
+</pubDate>
+    <description><![CDATA[<!-- F - post, U - update, D - delete -->
+<!-- U -->
+
+<div class="date">
+    <!-- Use :read !date_formatted_dots -->
+    Posted: 20.07.2022
+</div>
+<h3><a href="#complexity-in-art" id="complexity-in-art">
+Complexity in art</a></h3>
+<div class="tags">
+    <!-- Use tag snippet -->
+    <a href="/blog/all.html">#all</a>
+    <a href="/blog/art.html">#art</a>
+    <a href="/blog/personal.html">#personal</a>
+</div>
+<p>
+I might be stating the obvious, but I don't think there is any objective value
+to an art piece, except, maybe, it's historical value.
+<br>
+What I wanna talk about, is what makes an art pirece feel more valuable to me.
+One obvious thing is the context. A lot of my favorite music and visual
+artwork comes from games and movies I really like. I'd say it could be
+thought of as personal historical value, it makes you remember the story and
+its characters. Another thing is complexity.
+</p>
+<h5>
+   Hiding in plain sight
+</h5>
+<p>
+   One way to achieve complexity, is to have details or shapes that are not
+   obvious on first viewing. A great example is this Hyper Light Drifter
+   artwork I have as a poster. 
+<a href="https://www.fangamer.com/products/hld-poster-fallen">
+<img src="/resources/HLD/poster.png" id="smallimg"
+alt="https://www.fangamer.com/products/hld-poster-fallen"/>
+</a>
+   Can you see a hand and a skull of a giant that form the rock?
+   Some other details require familiarity with the game to notice. Discovering
+   these was very satisfying.
+</p>
+<h5>
+   Telling a story
+</h5>
+<p>
+   A lot of art also tries to convey some idea or commentary. Sometimes it's
+   explicit, sometimes hidden in metaphors and puzzles. I love when an artpiece
+   leaves a lot to interpretation, a great example I can think of is <a
+   href="https://www.youtube.com/c/vewnscape/videos">vewns animations</a>:
+   surface level topics and ideas are clear, others require multiple watches
+   and some thinking to understand, but still leave some ambiguity.
+   Unfortunately, I'm not the best at deciphering metaphors, and even worse at
+   trying to come up with a metaphor that could convey some of my feelings or
+   ideas.
+</p>
+<h5>
+   Putting secrets
+</h5>
+<p>
+    Doesn't really add complexity in the same sense, but
+   what I recently came to like to do is putting ARG-like hidden messages in
+   some of the art I make. 
+   It's mostly to satisfy those like me, who like those kinds
+   of things.
+</p>
+<p>
+   On that note here's an art piece I finished recently. 
+   It's inspired by the art of False Noise, Hyper Light Drifter, and
+   Etiene Crauss. In 3 variants, because I couldn't decide on a 
+   color palette.
+</p>
+<div class="row">
+    <div class="column">
+        <a href="/resources/art/pawa/pawa_8x.png">
+        <img src="/resources/art/pawa/pawa_8x.png" alt="abstract pixel art"/>
+        </a>
+    </div>
+    <div class="column">
+        <a href="/resources/art/pawa/pawa_h_8x.png">
+        <img src="/resources/art/pawa/pawa_h_8x.png" alt="abstract pixel art"/>
+        </a>
+    </div>
+    <div class="column">
+        <a href="/resources/art/pawa/pawa_i_8x.png">
+        <img src="/resources/art/pawa/pawa_i_8x.png" alt="abstract pixel art"/>
+        </a>
+    </div>
+</div>
+<p>
+    Thanks for reading my surface level thoughts on art. 
+    And while these complexities are cool, I don't want to overthink them,
+    so expect some more "simple" art.
+</p>
+<p>
+   BTW my art and project files are licenced under CC0.
+</p>
+<div class="links">
+    <a href="/resources/art/pawa/pawa.kra">.kra file (634KB)</a>
+</div>
+
+    ]]></description>
+    </item><item>
+    <title>Writing GUI to make weird designs</title>
+    <guid>https://teawide.xyz/blog/post/writing_gui_to_make_weird_designs.html</guid>
+    <link>https://teawide.xyz/blog/post/writing_gui_to_make_weird_designs.html</link>
+    <pubDate>Sun, 30 Jan 2022 00:00:00 +0000
+</pubDate>
+    <description><![CDATA[<!-- U - post, U - update, D - delete -->
+<!-- U -->
+
+<div class="date">
+    <!-- use :read !date_formatted_dots -->
+    Posted: 30.01.2022 | Updated: 06.02.2022
+</div>
+<h3><a href="#writing-gui-to-make-weird-designs" id="writing-gui-to-make-weird-designs">
+ Writing GUI to make weird designs </a></h3>
+
+<div class="tags">
+    <!-- Use tag snippet -->
+    <a href="/blog/all.html">#all</a>
+    <a href="/blog/tech.html">#tech</a>
+    <a href="/blog/art.html">#art</a>
+</div>
+<p>
+    Hello! First week already proved challenging.
+    Unfortunately I fell ill which also made it more difficult
+    to finish something meaningful in time, but I have some results.
+</p>
+    <h4> The Idea </h4>
+<p>
+    I really like art based around very simple concepts.
+    An example of such a concept is pixel art.
+    The idea of pixel art is about as simple as it gets -
+    you draw with little squares.
+    So, I was doodling around trying to come up with something
+    similar that looks cool.
+    <a href="/resources/design_program/sketch.png">
+    <img id="medimg" src="/resources/design_program/sketch.png" alt="sketch"/>
+    </a>
+    I came up with a modification of pixel art,
+    with non-parallel lines and variable line width.
+    I tried recreating it in
+    inkscape, but quickly encountered multiple problems, like
+    differently angled lines being at different distances from each
+    other and the ends of lines looking off.
+</p>
+    <h4> How to GUI </h4>
+<p>
+    In the end I just decided to write my own program to make 
+    this kind of designs. Only experience writing GUI I had 
+    was using QT (C++); it was painful. I decided instead to 
+    use Godot, as using a python-like language with dynamically
+    typed variables seemed like a much better idea for a GUI.
+</p>
+<p>
+    I had a few ideas I wanted to implement in my Goo-e: 
+    shortcuts that the user can set/unset just by right-clicking 
+    the element instead of going into settings menu and 
+    searching for it there (I prototyped it but didn't yet use).
+    Another idea was giving the user to ability to save
+    any value as default (again, by right-clicking), for
+    now I implemented it with a button next to a value.
+</p>
+    <h4> How do I optimize this ;-; </h4>
+<p>
+    <a href="/resources/design_program/ui_screenshot.png">
+    <img src="/resources/design_program/ui_screenshot.png" alt="program screenshot"/>
+    </a>
+    As you can see the UI is incredibly bare-bones. Main features 
+    are there: you can pan, zoom, draw and erase lines on a grid.
+    Changing the angle of the grid is incredibly laggy as the code
+    has to update a huge amount of individual nodes (objects).
+    I will probably completely rewrite the entire program at 
+    some point.
+</p>
+    <h4> Was it worth it? </h4>
+<p>
+    Writing an entire program just to make this very specific 
+    type of designs might seems silly, especially considering
+    how I realised that this effect can be achieved just by
+    applying a simple image transform on a picture made using
+    a normal square grid.
+</p>
+<p>
+    Regardless, the experience is valuable.
+    I felt good programming, abusing the hell
+    out of Godot's signal system and other features that make 
+    my life just a little bit easier. And damn does it feel 
+    good accomplishing something at the end of the week and
+    posting about it here. Here is something I doodled in 
+    the program: see if you can figure out what it says, 
+    each letter is made out of 1 line.
+    <a href="/resources/design_program/design.png">
+    <img src="/resources/design_program/design.png" alt="pic"/>
+    </a>
+    That's it for this week! Let's see what lies ahead :)
+    
+</p>
+<div class="links">
+    <a href="https://github.com/TeaWhyDee/angled-grid-draw">
+        GitHub repo
+    </a>
+</div>
+
+    ]]></description>
+    </item><item>
+    <title>15 Day Challenge: Drawing</title>
+    <guid>https://teawide.xyz/blog/post/15_day_challenge_drawing.html</guid>
+    <link>https://teawide.xyz/blog/post/15_day_challenge_drawing.html</link>
+    <pubDate>Sat, 31 Jul 2021 00:00:00 +0000
+</pubDate>
+    <description><![CDATA[<!-- U -->
+
+<div class="date">
+    Posted: 31.07.2021
+</div>
+<h3><a href="#15-day-challenge-drawing" id="15-day-challenge-drawing">
+ 15 Day Challenge: Drawing </a></h3>
+
+<div class="tags">
+    <!-- Use tag snippet -->
+    <a href="/blog/all.html">#all</a>
+    <a href="/blog/art.html">#art</a>
+</div>
+<p>
+Me and my friend PizzArt decided to do 15 day long art challenges.
+It is definitely a great way to make yourself learn something new.
+You are motivated by 2 powerful things: deadlines - 1 piece everyday,
+responsibility - your friend is expecting you, so you can't skip a
+day for silly reasons.
+<a href="/resources/ArtChal1/ArtChal_prev1.jpg">
+    <img src="/resources/ArtChal1/ArtChal_prev1.jpg" alt="Compilation of 4 hand-drawn images"/>
+
+</p>
+<p>
+4 of the images were drawn with pen and pencil, everything else
+was drawn digitally in Krita (would recommend for painting).
+I used filter and concept art brush packs from
+<a href="https://docs.krita.org/en/resources_page.html">Krita's website</a>.
+You can download the images and project files below if you want.
+As you can see, the reference photos are also included.
+<a href="/resources/ArtChal1/ArtChal_prev2.jpg">
+    <img src="/resources/ArtChal1/ArtChal_prev2.jpg" alt="Compilation of digital drawings"/>
+
+Check out PizzArt's drawings on
+<a href="https://pizzart.github.io/blog.html"> his blog</a>.
+</p>
+<div class="links">
+    <a href="/resources/ArtChal1/AC_Jul2021_pictures.zip">Drawings (24M)</a>
+    <a href="https://mega.nz/file/QKA0iRDJ#TCjW6NNAAShraIpkb9hBOZwM3YFVc2a3B0EmGw_q2TI">.kra files (154M)</a>
+</div>
+
+    ]]></description>
+    </item><item>
+    <title>Website Artwork</title>
+    <guid>https://teawide.xyz/blog/post/website_artwork.html</guid>
+    <link>https://teawide.xyz/blog/post/website_artwork.html</link>
+    <pubDate>Mon, 26 Jul 2021 00:00:00 +0000
+</pubDate>
+    <description><![CDATA[<!-- U -->
+
+<div class="date"> 
+    Posted: 26.07.2021 | Updated: 26.07.2021 
+</div>
+<h3><a href="#website-artwork" id="website-artwork">
+ Website Artwork </a></h3>
+
+<div class="tags">
+    <!-- Use tag snippet -->
+    <a href="/blog/all.html">#all</a>
+    <a href="/blog/art.html">#art</a>
+</div>
+
+<p>
+This was the first time I ever used Inkscape. Surpisingly
+easy to use, the interface also looks nice. 
+Great open-source program! 
+This post will (hopefully) be updated in the future.
+<a href="/resources/Screenshot-Inkscape.png">
+    <img src="/resources/Screenshot-Inkscape.png" alt="Screenshot of Inkscape"/>
+
+</p>
+
+<div class="links">
+    <a href="/resources/website_content.zip"> .svg files (113K) </a>
+    <a href="https://inkscape.org/"> Inkscape.org </a>
+</div>
+
+    ]]></description>
+    </item>
+
+</channel>
+</rss>
+

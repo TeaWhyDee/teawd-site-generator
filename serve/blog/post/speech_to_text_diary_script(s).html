@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/style2.css">
+        <link rel="stylesheet" href="/css/header.css">
+        
+        <title>teawd's blog</title>
+    </head>
+    <body>
+        <nav>
+            <form>
+                <a class="button" href="/home.html" id="b2"> home </a>
+<a class="button" href="/blog.html" id="active"> blog </a>
+
+<a class="button" href="/art.html"> art </a>
+<a class="button" id="empty"> </a>
+
+            </form>
+        </nav>
+
+        <div class="article">
+
+
+
+<div class="date">
+    
+    Posted: 25.03.2022
+</div>
+<a href="#speech-to-text-diary-scripts" id="speech-to-text-diary-scripts">
+<h3> Speech to text diary script(s) </h3>
+</a>
+<div class="tags">
+    
+        <a href="/blog/tech.html">#tech</a>
+        <a href="/blog/linux.html">#linux</a>
+</div>
+<p>
+First of all, this blog post is about a somewhat specific problem. Despite
+this, I think it is quite useful to most readers looking for some Linux
+knowledge as the tools I used are very general. Let's start with the
+explanation of
+</p>
+<h4>
+   The problem 
+</h4>
+<p>
+   Sometimes I have good ideas when I'm outside. Sometimes I really wanna
+   preserve these ideas, but it's very inconvenient to use phone keyboards,
+   especially on the move. One solution is recording my voice. But then, I
+   would want to transfer those recordings to my computer for future reference.
+</p>
+<p>
+   That's not too hard to do, but what if I also want to read the text version
+   of those voice recordings?
+</p>
+<h4>
+   The solution
+</h4>
+<h5>
+   Syncthing 
+</h5>
+<p>
+   Syncthing is an open source cross-platform program that can sync folders
+   accross multiple devices. It's perfect for this problem, as it allows for
+   P2P syncing (for example from your phone to your computer).
+   <br>
+   It's very easy to set up aswell, you download it on both devices, open a
+   browser tab on 127.0.0.1:8384 and scan the ID QR with your phones camera.
+   Then share whatever is the folder that has your audio recordings.
+   <br>
+   Sometimes your folder might have some additional files popping up in it, you
+   can configure syncthing on your desktop to ignore those.
+   <br>
+   If you want more robust syncing, you could also host a Syncthing instance 
+   on a server. In case you don't trust the server, Syncthing also provides
+   encryption.
+</p>
+<h5>
+    Storing recoring in notes
+</h5>
+<p>
+    I use vimwiki [a (neo)vim plugin] that makes managing markdown files in a 
+    wiki-like manner extremely easy.
+
+</p>
+<div class="links">
+    <a href="">  </a>
+</div>
+</div>
+    </body>
+</html>
