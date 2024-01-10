@@ -41,7 +41,9 @@ if [[ $# -eq 0 ]]; then
     set - --recursive "$wd" #Added quotes for whitespace in path
 fi
 
-inotifywait --monitor --event CLOSE_WRITE "$@" | while read; do
+# inotifywait --monitor --event CLOSE_WRITE "$@" | while read; do
     #echo "$REPLY"
     sendkey $browser $keystroke
-done
+    sleep 0.1
+    sendkey $browser $keystroke
+# done

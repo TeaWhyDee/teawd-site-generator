@@ -1,0 +1,2 @@
+toml==0.10.2
+colorutils==0.3.0

@@ -1,0 +1,23 @@
+@media only screen and (max-width: 600px) {
+
+    html, body {
+        font-size: 12px;
+    }
+
+    .article p {
+        padding-left: 4.5%;
+        padding-right: 4.5%;
+    }
+}
+
+@media only screen and (max-width: 900px) and (min-width: 600px) {
+
+    html, body {
+        font-size: 14px;
+    }
+
+    .article p {
+        padding-left: 5.5%;
+        padding-right: 5.5%;
+    }
+}
