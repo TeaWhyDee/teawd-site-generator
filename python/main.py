@@ -10,14 +10,11 @@ import glo as g
 
 from colorutils import Color
 import rss
-# import subprocess
-# import time
 
 is_debug = False
 comment_pattern = r'<!--.*-->'
 
 template_content = open(g.path_templates + "template.html", "r").read()
-# blog_index_template = open(g.path_templates + "blog_index.html", "r").read()
 
 
 def html_escape(text):
@@ -56,6 +53,8 @@ def compile_site():
     sections = { "home", "blog", "art", "misc" }
     # For each file in directory to_serve, 
     # add a heading etc.
+
+    # TODO REWRITE
     for path_root, dirs, files in os.walk("./.websitegen/html_content/"):
         for file in files:
             rel_dir = os.path.relpath(path_root, g.path_cache)
@@ -79,10 +78,6 @@ def compile_site():
 
             headers = str(open(g.path_templates + "header_template.html", "r").read())\
                     .split("\n")
-
-            # rss = os.path.join(rel_dir, os.path.splitext(file)[0] + ".xml")
-            # if os.path.exists(os.path.join(g.path_to_serve, rss)):
-            #     headers.append(f'<a class="button" href="/{rss}"> RSS </a>')
 
             # Determine which section of website we are in
             # by checking filename and folder structure for matches
@@ -225,9 +220,6 @@ def compile_section(section_name: str, is_blog: bool = False):
 
     # ========== INDEX PAGE ==========
     out_blog_index = open(g.path_cache + f"{section_name}.html", "w")
-    # for tag in tags:
-    #     color = tag_colors[tag] if tag in tag_colors else ""
-    #     tags_html_all += get_tag_html(tag, section_name=section_name, col=color)
     tags_html_all = get_tags_html(tags, config["tag_colors"], section_name=section_name, use_all=True)
 
     posts_html = ""
@@ -246,12 +238,6 @@ def compile_section(section_name: str, is_blog: bool = False):
                                                         default_col="blues",
                                                         use_all=False)
                                                         )
-        # posts_ht!ml += f'{post["date"]} - ' \
-        #         !+ f'<em><a href=> {post["title"]} </a></em> &nbsp;' \
-        #         !+ '<span id="small">' \
-        #         +  \
-        #         + '</span> <br> \n'
-                # + '<br>\n'
 
     index_content = section_index_template.replace("<!-- POSTS -->", posts_html)
     index_content = index_content.replace("<!-- TAGS -->", tags_html_all)
