@@ -4,6 +4,9 @@ python/__pycache__/glo.cpython-311.pyc
 python/__pycache__/rss.cpython-311.pyc
 resources
 serve
-src
+# src
 .websitegen
 templates/art
+src/art.toml
+publish.sh
+css/art.css

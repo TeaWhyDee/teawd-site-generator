@@ -1,0 +1,18 @@
+[config]
+index = "home.html"
+# sections = ["home", "blog", "art"]
+
+[sections]
+    [sections.home]
+    visible = true
+    blog = false
+    
+    [sections.blog]
+    visible = true
+    blog = true
+    rolling = false
+
+    [sections.art]
+    visible = true
+    blog = true
+    rolling = true

@@ -1,0 +1,37 @@
+
+<p>
+MPV is one of my favorite open source projects. It's a simple-looking 
+video player with an enormous amount of features while also being 
+highly extensible through the lua programming language.
+</p>
+<h4>
+   MPV-splice Script 
+</h4>
+<p>
+    MPV-splice is a script that allows you to use MPV as a video editor.
+    You set the start and end timings for fragments, and then 
+    the script cuts the video and concatenates the fragments.
+</p>
+<p>
+   I made a fork of it to extend it's abilities.
+   <ul>
+       <li>
+           I added an option to automatically upload
+            the video (to any platform, but the default config works for Streamable).
+       </li>
+       <li>
+           I added an option to reencode the video, making the timings frame perfect.
+           By default, the script does not reencode the video, allowing for extremely 
+           fast results.
+       </li>
+       <li>
+           I fixed the editing of online videos. The script will only download the 
+           selected portions of the video, which allows you to cut out fragments of even
+           hours long YouTube videos for example.
+       </li>
+   </ul>
+</p>
+<p>
+   Another useful script I forked is 8mb, which compresses your video to 8mb, changing
+   it's FPS and resolution to appropriate values.
+</p>
