@@ -1,5 +1,6 @@
 
 venv
+python/__pycache__/
 python/__pycache__/glo.cpython-311.pyc
 python/__pycache__/rss.cpython-311.pyc
 resources

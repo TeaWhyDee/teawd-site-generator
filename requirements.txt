@@ -1,2 +1,4 @@
 toml==0.10.2
 colorutils==0.3.0
+pillow==12.0.0
+bs4==0.0.2

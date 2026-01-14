@@ -13,6 +13,7 @@
 # `htmlreload --chrom` will match both Chromium and Chrome.
 
 cd serve
+# cd serve_git
 browser-sync start --server --files . &
 
 set -o errexit
