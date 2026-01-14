@@ -123,7 +123,7 @@ def generate_headers(section) -> List[str]:
 
 
 def compile_site():
-    sections = {"home", "blog", "art", "misc"}
+    sections = {}
     # final step
     # For each file in directory to_serve,
     # add a heading etc.
@@ -138,7 +138,7 @@ def compile_site():
                 continue
             content = open(g.path_cache + rel_file, "r").read()
 
-            section = "misc"  # for other content, set section as misc
+            section = global_config["config"]["config"]["default_section"]
             root_dir = os.path.dirname(rel_file).split("/")[0]
             # Determine which section of website we are in
             # by checking filename and folder structure for matches
@@ -155,6 +155,8 @@ def compile_site():
             headers = generate_headers(section)
 
             # extract titles, descriptions, keywords
+            title_prefix = global_config["config"]["config"]["title_prefix"]
+
             title_str_prefix = ""
             meta_str = None
             keywords = []
@@ -178,7 +180,7 @@ def compile_site():
                 if "meta_keywords" in global_config["files"][rel_file]:
                     keywords.extend(global_config["files"][rel_file]["meta_keywords"])
 
-            title = f"<title>{title_str_prefix}teawd's " + section + "</title>"
+            title = f"<title>{title_str_prefix}{title_prefix}" + section + "</title>"
 
             meta_str = meta_str or ""
             meta_desc = f'<meta name="description" content="{meta_str}">'
@@ -227,7 +229,7 @@ def compile_site():
         sitemap_link = sitemap_link[:-5]
         sitemap_string += f"\
     <url>\n\
-        <loc> {g.domain}/{sitemap_link} </loc>\n\
+        <loc> {global_config["config"]["config"]["domain"]}/{sitemap_link} </loc>\n\
     </url>\n"
     sitemap_string += "</urlset>"
 
@@ -287,6 +289,7 @@ def compile_section(section_name: str, is_blog: bool = False):
         section_toml = {}
 
     global_config[section_name] = section_toml
+    domain = global_config["config"]["config"]["domain"]
 
     # NON-BLOG SECTIONS
     if not is_blog:
@@ -589,22 +592,33 @@ def compile_section(section_name: str, is_blog: bool = False):
         rss_items = ""
         for post_name in map_tag_posts[tag]:
             post = posts[post_name]
-            rss_link = g.domain + f"/{section_name}/post/" + post_name
+            rss_link = (
+                global_config["config"]["config"]["domain"]
+                + f"/{section_name}/post/"
+                + post_name
+            )
 
             post_content = re.sub(comment_pattern, "", post["content"])
 
             rss_items += rss.create_rss_item(
+                global_config["config"],
                 post["title"],
                 rss_link,
                 rss.rss_date(post["date"]),
                 post_content,
             )
 
-        rss_title = f"teawd's blog#{tag}"
-        rss_desc = f"Full size posts from teawide.xyz/{section_name}/{tag}"
+        title_prefix = global_config["config"]["config"]["title_prefix"]
+
+        rss_title = f"{title_prefix}blog#{tag}"
+        rss_desc = f"Full size posts from {domain}/{section_name}/{tag}"
         rss_link = f"/{section_name}/{tag}"
         f_tag_rss = open(g.path_serve + f"{section_name}/{tag}.xml", "w")
-        f_tag_rss.write(rss.create_rss(rss_title, rss_desc, rss_link, rss_items))
+        f_tag_rss.write(
+            rss.create_rss(
+                global_config["config"], rss_title, rss_desc, rss_link, rss_items
+            )
+        )
         f_tag_rss.close()
 
     # backwards compatibility :))))))))

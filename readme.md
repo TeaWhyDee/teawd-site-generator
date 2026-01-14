@@ -100,3 +100,10 @@ Files:
 - `glo.py` - global variables (config file).
 - `rss.py` - rss feed generation code.
 
+# Example
+
+```python
+cd example
+python ../python/main.py
+./serve.sh
+```

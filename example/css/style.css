@@ -1,0 +1,44 @@
+:root {
+    --bg:    #191929;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    min-height: 100vh;
+    font-size: 16px;
+    max-width: 1100px;
+    margin: 0 auto 0 auto;
+    padding: 1in;
+    /* background: var(--bg); */
+}
+
+
+p.centered {
+    text-indent: 0;
+    text-align: center;
+    line-height: 1.3em;
+    padding-top: 0.4em;
+    padding-bottom: 0.4em;
+}
+
+div.centered {
+    font-size: 1.3rem;
+
+    display: flex;
+    padding-left: 5.5%;
+    padding-right: 5.5%;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.macro {
+    font-size: 2em;
+}
+
+.table-macro {
+    font-size: 2em;
+}

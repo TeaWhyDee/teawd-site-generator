@@ -1,0 +1,15 @@
+[config]
+index = "home.html"
+meta_keywords = ["i'm an SCO keyord"]
+default_section = "home"
+domain = "example.com"
+title_prefix = "this is a "
+
+[sections]
+    [sections.home]
+    visible = true
+    blog = false
+    
+    [sections.blog]
+    visible = true
+    blog = true

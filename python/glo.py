@@ -1,5 +1,3 @@
-domain = "https://teawide.xyz"
-
 # Data dirs. All dir paths must have trailing slashes.
 path_root = "./"
 path_src = path_root + "src/"

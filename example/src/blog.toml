@@ -1,0 +1,34 @@
+[settings]
+    meta_description = "SEO description"
+
+    [settings.tag_colors]
+    some = "dcbe8a"
+    other = "8aadce"
+    tag = "dd9ace"
+    all = "6bb28c"  # always present tag
+
+    [settings.fields]
+    macro = '<div class="macro"> {} </div>'
+    table_macro = '<p>{key} : <a>{value}</a></p>'
+
+
+[posts]
+    [posts.post1]
+    title = "Post 1!"
+    filename = "some_filename_post1"
+    visible = true
+    meta_description = "SEO!"
+    meta_keywords = [ "more", "SEO" ]
+    tags = [ "some", "tag" ]
+    date = "01.10.2026"
+
+    macro = "macro value! I have a special style you can change across all posts!"
+    table_macro = { "list macro key1" = "i can be used for links", "list macro key2" = "or images and other media sources" }
+
+
+    [posts.post2]
+    title = "other post"
+    filename = "post2"
+    visible = true
+    tags = [ "other", "tag" ]
+    date = "14.12.2025"

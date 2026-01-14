@@ -11,8 +11,8 @@ def rss_title(title):
     return title
 
 
-def create_rss(title, desc, link, items):
-    link_full = g.domain + link
+def create_rss(config, title, desc, link, items):
+    link_full = config["config"]["domain"] + link
 
     rss = (
         template_rss.replace("<!-- CONTENT -->", items)
@@ -23,7 +23,7 @@ def create_rss(title, desc, link, items):
     return rss
 
 
-def create_rss_item(title, link, date, content):
+def create_rss_item(config, title, link, date, content):
     content = content.replace("<code>", "</p><p>")
     content = content.replace("</code>", "</p><p>").strip()
     title = rss_title(title)
@@ -37,7 +37,9 @@ def create_rss_item(title, link, date, content):
 
     pattern = r'(href|src)="(?!https://)([^"]+)"'
     rss_item = re.sub(
-        pattern, lambda m: f'{m.group(1)}="{g.domain}{m.group(2)}"', rss_item
+        pattern,
+        lambda m: f'{m.group(1)}="{config["config"]["domain"]}{m.group(2)}"',
+        rss_item,
     )
 
     return rss_item
