@@ -12,11 +12,11 @@ The script generates a tree of html pages, each one containing a header and cont
 Blog sections have rolling and index pages (for all posts and for each tag).
 
 It generates the following end-points and files:
-- /resources/   (media)
-- /section-name/     (pages of a section, section-name is user defined)
-- /section-name.html (index page of a section)
-- /index.html   (copy of selected section)
-- /css/
+- `/resources/`   (media)
+- `/section-name/`     (pages of a section, section-name is user defined)
+- `/section-name.html` (index page of a section)
+- `/index.html`   (copy of selected section)
+- `/css/`
 
 End-points are called 'sections'.
 tea-sitegen allows for two types of sections:
@@ -51,10 +51,10 @@ A section is defined with:
 Posts are defined using:
 - An entry inside a section toml file (path: `src/section.html`).
 - An html template (path: `templates/section/post.html`).
-- Take an additional .html file
+- Optional .html file (`src/section/post_filename.html`)
 
 Posts have the following settings:
-- Hide from index.
+- `Visible` (wether or not the post should show up in the index and #all pages).
 
 ## Usage
 The only config file necessary to run the script is config.toml, it defines the index page and sections.
@@ -65,19 +65,32 @@ Edit `src/config.toml` and define at least one section:
     [sections.blog]
     visible = true   # false hides the section from the header.
     blog = true      # wether the section should be a blog-section.
-    rolling = false  # wether landing page should be a rolling or an index page.
 ```
 
 Section config consists of:
 - Tags, tag colors.
-- Macros (html with substitutable values defined in post definitions)
+- Macros (html strings with substitutable values defined in post definitions)
 
 Defite the config for the section `src/blog.toml`:
 ```
+[settings]
+    [settings.tag_colors]
+    some = "dddddd"
+    tag = "dd9ace"
+    all = "6bb28c"  # always present tag
 
+    [settings.fields]
+    macro = '<div class="macro"> {} </div>'
+
+[posts]
+    [posts.post1]
+    title = "post with html file content"
+    filename = "content_file"
+    visible = true
+    tags = [ "some", "tag" ]
+    date = "01.01.2026"
+    macro = "i am a macro value"
 ```
-
-
 
 
 Put media into `resources`.
@@ -97,7 +110,7 @@ python python/main.py
 All code is stored in the `python` folder.
 Files:
 - `main.py` - site generation code.
-- `glo.py` - global variables (config file).
+- `glo.py` - Path definitions for generation.
 - `rss.py` - rss feed generation code.
 
 # Example
@@ -105,5 +118,10 @@ Files:
 ```python
 cd example
 python ../python/main.py
-./serve.sh
 ```
+
+Generated code will be located in `./serve`
+
+Use `./serve.sh` to automatically open it in a browser, or
+you can simply open the files created in `./serve`.
+
